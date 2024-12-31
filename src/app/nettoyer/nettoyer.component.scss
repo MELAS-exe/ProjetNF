@@ -1,9 +1,21 @@
+$Cblack: #131010;
+$Cyellow: #FFD18D;
+$Cdarkyellow: #E59B59;
+$Cbrown: #aa6728;
+$Cgreen: #91CA61;
+$Cgrey: #D9D9D9;
+
 main{
-    padding: 70px 70px;
+    padding: 50px 70px;
     min-height: 85vh;
 }
 
-span{
+.nettoyer-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
     font-family: 'inter';
     font-weight: bold;
 }
@@ -18,4 +30,73 @@ p{
         max-width: 509px;
         font-size: 14px;
     }
+}
+
+.exemple{
+    display: flex;
+    flex-direction: column;
+
+    p{
+        margin-bottom: 5px;
+    }
+}
+
+app-audio-player{
+    margin-bottom: 5px;
+}
+
+.file-area{
+    background-color: $Cgrey;
+    width: 55%;
+    height: 55vh;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.import{
+    align-self: center;
+}
+
+.submit{
+    display: none;
+}
+
+.principe{
+    margin-top: 40px;
+    
+    p{
+        width: fit-content;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+.etapes{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.etape{
+    margin-right: 20px;
+    justify-items: center;
+    width: fit-content;
+}
+
+.image-circle{
+    background-color: $Cbrown;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 100px;
+}
+
+.subtitle{
+    font-weight: bold;
+    font-size: 12px !important;
+}
+
+.line{
+    height: 3px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
