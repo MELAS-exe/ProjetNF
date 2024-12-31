@@ -1,0 +1,30 @@
+<div
+  class="file-upload-wrapper"
+  [class.success]="uploadSuccess"
+  [class.error]="uploadError"
+  (drop)="onFileDrop($event)"
+  (dragover)="onDragOver($event)"
+>
+  <input
+    type="file"
+    accept="audio/*"
+    (change)="onFileChange($event)"
+    hidden
+    #fileInput
+  />
+  <div class="file-dropper" (click)="fileInput.click()">
+    <mat-icon>upload</mat-icon>
+    <p>{{ "Importer un fichier audio"}}</p>
+    <div *ngIf="audioName()">
+      <div *ngIf="selectedFile || audioPreview">
+        <mat-icon>audiotrack</mat-icon>
+        <p>
+          <span class="audio-name">{{ audioName() }}</span> ({{
+            fileSize()
+          }} KB)
+        </p>
+        <mat-icon class="delete-icon" (click)="removeaudio()">delete</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
