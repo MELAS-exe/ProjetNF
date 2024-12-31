@@ -1,8 +1,12 @@
 div{
     display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 10;
 }
 
 p{
+    z-index: 10;
     margin: auto 0 ;
     margin-left: 20px;
     font-family: 'inter';

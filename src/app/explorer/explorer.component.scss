@@ -1,0 +1,51 @@
+$Cblack: #131010;
+$Cyellow: #FFD18D;
+$Cdarkyellow: #E59B59;
+$Cbrown: #aa6728;
+$Cgreen: #91CA61;
+$Cgrey: #D9D9D9;
+
+
+main{
+    min-height: 85vh;
+}
+
+.home-img{
+    width: 100%;
+    z-index: 1;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+    top: -66px;
+}
+
+.title-container{
+    justify-items: center;
+    align-content: center;
+    background-color: black;
+    opacity: 66%;
+    height: 222px;
+    position: relative;
+    top: -288px;
+    z-index: 3;
+}
+
+.title, .subtitle{
+    color: white;
+}
+
+.title{
+    font-family: sofia;
+    font-size: 64px;
+}
+
+.subtitle{
+    font-size: 24px;
+}
+
+.gallery{
+    position: relative;
+    top: -200px;
+    padding-left: 40px;
+    padding-right: 40px;
+}

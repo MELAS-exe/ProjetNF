@@ -45,7 +45,7 @@ export class DragDropComponent {
     if (file && file.type.startsWith('audio/')) {
       this.selectedFile = file;
       this.fileSize.set(Math.round(file.size / 1024)); // Set file size in KB
-
+        
       const reader = new FileReader();
       reader.onload = (e) => {
         this.audioPreview.set(e.target?.result as string); // Set audio preview URL
