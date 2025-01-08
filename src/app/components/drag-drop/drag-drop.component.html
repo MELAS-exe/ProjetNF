@@ -1,3 +1,4 @@
+<!-- <mat-icon class="delete-icon" (click)="removeaudio()">delete</mat-icon> -->
 <div
   class="file-upload-wrapper"
   [class.success]="uploadSuccess"
@@ -12,19 +13,27 @@
     hidden
     #fileInput
   />
-  <div class="file-dropper" (click)="fileInput.click()">
-    <mat-icon>upload</mat-icon>
-    <p>{{ "Importer un fichier audio"}}</p>
+  <div class="file-dropper">
+    <div *ngIf="!(selectedFile)" class="file-dropper">
+      <mat-icon>upload</mat-icon>
+      <p >{{ "Importer un fichier audio"}}</p>
+    </div>
     <div *ngIf="audioName()">
-      <div *ngIf="selectedFile || audioPreview">
-        <mat-icon>audiotrack</mat-icon>
-        <p>
-          <span class="audio-name">{{ audioName() }}</span> ({{
-            fileSize()
-          }} KB)
-        </p>
-        <mat-icon class="delete-icon" (click)="removeaudio()">delete</mat-icon>
-      </div>
+      <div *ngIf="selectedFile || audioPreview" class="preview">
+        <div class="d-flex">
+          <mat-icon>audiotrack</mat-icon>
+          <p>
+            <span class="audio-name">{{ audioName() }}</span> ({{
+              fileSize()
+            }} KB)
+          </p>
+          <mat-icon class="delete-icon" (click)="removeaudio()">delete</mat-icon>
+        </div>
+        <button class="nettoyer-button">
+          Nettoyer
+          <mat-icon>star</mat-icon>
+        </button>
+      </div>  
     </div>
   </div>
 </div>

@@ -25,7 +25,6 @@ export class DragDropComponent {
   // Handler for file input change
   onFileChange(event: any): void {
     const file = event.target.files[0] as File | null;
-    this.uploadFile(file);
   }
 
   // Handler for file drop

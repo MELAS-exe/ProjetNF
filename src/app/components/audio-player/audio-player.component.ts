@@ -19,7 +19,7 @@ export class AudioPlayerComponent implements AfterViewInit, OnDestroy {
         container: '#' + this.id(),
         height: 30,
         waveColor: 'black',
-        progressColor: 'rgb(145,202,97)',
+        progressColor: 'rgb(170,103,40)',
         width: 210,
         url: this.url(),
     
