@@ -56,13 +56,27 @@ $Cgrey: #D9D9D9;
   width: fit-content;
 }
 
+@keyframes colorAnimation {
+    0%{
+      color: black;
+      transform: rotate(0deg);
+    }
+    50%{
+      color: $Cgreen;
+    }
+    100%{
+      color: black;
+      transform: rotate(360deg);
+    }
+}
+
 .nettoyer-button{
   border: none;
   background-color: $Cgreen;
   color: black;
   font-family: inter;
   font-weight: bold;
-  width: 120px;
+  width: 140px;
   height: 40px;
   border-radius: 5px;
   position: relative;
@@ -75,12 +89,18 @@ $Cgrey: #D9D9D9;
   &:hover {
     background-color: black;
     color: $Cgreen;
+
     mat-icon{
       display: inline;
-      color: $Cgreen;
+      color: black;
       position: absolute;
-      bottom: 10px;
-      right: 0px;
+      bottom: 12.5px;
+      right: 15px;
+      font-size: 15px;
+      width: 18px;
+      height: 15px;
+      animation: colorAnimation;
+      animation-duration: 2s;
     }
   }
 }
