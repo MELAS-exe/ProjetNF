@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, ElementRef } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-
+import { PostAudioService } from '../../services/post-audio.service';
 @Component({
   selector: 'app-drag-drop',
   templateUrl: './drag-drop.component.html',
@@ -20,7 +20,7 @@ export class DragDropComponent {
   uploadSuccess: boolean = false;
   uploadError: boolean = false;
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar, private postAudioService: PostAudioService) {}
 
   // Handler for file input change
   onFileChange(event: any): void {
@@ -61,6 +61,21 @@ export class DragDropComponent {
         duration: 3000,
         panelClass: 'error',
       });
+    }
+  }
+
+  postFile(): void{
+    if(this.selectedFile) {
+      this.postAudioService.uploadAudio(this.selectedFile, 'echo').subscribe(
+        (response) => {
+          console.log("File uploaded succesfully:", response);
+        },
+        (error) => {
+          console.error("Error uploading File", error);
+        }
+      );
+    } else {
+      console.error("No file selected");
     }
   }
 

@@ -10,13 +10,16 @@ main{
     min-height: 85vh;
 }
 
+.image-top{
+    position: relative;
+    top: -66px;
+}
+
 .home-img{
     width: 100%;
     z-index: 1;
     height: 700px;
     object-fit: cover;
-    position: relative;
-    top: -66px;
 }
 
 .title-container{
@@ -26,7 +29,7 @@ main{
     opacity: 66%;
     height: 222px;
     position: relative;
-    top: -288px;
+    top: -220px;
     z-index: 3;
 }
 
@@ -44,8 +47,52 @@ main{
 }
 
 .gallery{
+    display: flex;
+    width: 1480px;
+    flex-wrap: wrap;
     position: relative;
-    top: -200px;
+    top: 100px;
+    justify-self: center;
+    margin-bottom: 100px;
     padding-left: 40px;
     padding-right: 40px;
+    app-gallery-item{
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+.search{
+    margin-top: -200px;
+    padding-right: 20px;
+    justify-self: center;
+    width: 500px;
+    height: 60px;
+    border: solid 2px black;
+    border-radius: 300px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    input{
+        z-index: 100;
+        padding-left: 20px;
+        border: none;
+        border-radius: 300px;
+        width: 100%;
+        height: 100%;
+    }
+
+    mat-icon{
+        color: $Cgreen;
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+        z-index: 100;
+        &:hover{
+            color: black;
+        }
+    }
 }
